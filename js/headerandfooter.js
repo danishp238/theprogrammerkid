@@ -3,7 +3,7 @@ const footer = document.querySelector('#footer');
 
 const headerContent = `
 <nav class="glitter-bg text-white py-4 sticky top-0 z-50 shadow-lg">
-  <div class="container mx-auto px-4 flex justify-between items-center">
+  <div class="container mx-auto px-4 flex items-center justify-between">
     <!-- Logo -->
     <div class="flex items-center flex-shrink-0">
       <a href="index.html" class="flex items-center">
@@ -14,40 +14,45 @@ const headerContent = `
       </a>
     </div>
 
-    <!-- Hamburger button -->
+    <!-- Centered Desktop Navigation -->
+    <div class="hidden lg:flex flex-1 justify-center space-x-8">
+      <a href="index.html#topics" class="hover:text-blue-200 transition-colors">Topics</a>
+      <a href="privacy-policy.html" class="hover:text-blue-200 transition-colors">Privacy Policy</a>
+      <a href="about.html" class="hover:text-blue-200 transition-colors">About</a>
+      <a href="contact.html" class="hover:text-blue-200 transition-colors">Contact</a>
+    </div>
+
+    <!-- Right-side Get Started button -->
+    <a href="index.html#topics" class="hidden lg:block">
+      <button
+        class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors whitespace-nowrap">
+        Get Started
+      </button>
+    </a>
+
+    <!-- Hamburger button (visible only on mobile) -->
     <button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none">
       <span class="bg-white w-6 h-0.5 mb-1.5 transition-all duration-300" id="bar1"></span>
       <span class="bg-white w-6 h-0.5 mb-1.5 transition-all duration-300" id="bar2"></span>
       <span class="bg-white w-6 h-0.5 transition-all duration-300" id="bar3"></span>
     </button>
 
-    <!-- Desktop Navigation -->
-    <div class="hidden lg:flex items-center space-x-8">
-      <a href="index.html#topics" class="hover:text-blue-200 transition-colors">Topics</a>
-      <a href="privacy-policy.html" class="hover:text-blue-200 transition-colors">Privacy Policy</a>
-      <a href="contact.html" class="hover:text-blue-200 transition-colors">Contact</a>
-      <a href="about.html" class="hover:text-blue-200 transition-colors">About</a>
-      <a href="index.html#topics">
-        <button class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors">
-          Get Started
-        </button>
-      </a>
-    </div>
-
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-blue-900 bg-opacity-95 z-40 lg:hidden hidden transition-opacity duration-300">
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-blue-900 bg-opacity-95 z-40 lg:hidden hidden transition-opacity duration-300">
       <div class="flex flex-col items-center justify-center h-full space-y-8">
         <a href="index.html#topics" class="text-2xl font-semibold text-white hover:text-blue-200 transition-colors">Topics</a>
         <a href="privacy-policy.html" class="text-2xl font-semibold text-white hover:text-blue-200 transition-colors">Privacy Policy</a>
-        <a href="contact.html" class="text-2xl font-semibold text-white hover:text-blue-200 transition-colors">Contact</a>
         <a href="about.html" class="text-2xl font-semibold text-white hover:text-blue-200 transition-colors">About</a>
+        <a href="contact.html" class="text-2xl font-semibold text-white hover:text-blue-200 transition-colors">Contact</a>
         <a href="index.html#topics">
-          <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors text-lg mt-4">
+          <button
+            class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors text-lg mt-4">
             Get Started
           </button>
         </a>
       </div>
-      
+
       <!-- Close button -->
       <button class="absolute top-6 right-6 text-white text-2xl p-2" id="close-menu">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

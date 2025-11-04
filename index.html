@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheProgrammerKid | Website Building & Optimization Guide</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Glitter effect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header id="header" class="sticky top-0 z-50"></header>
+
+    <!-- Hero Section -->
+    <section id="home" class="glitter-bg text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-glow">Build & Optimize Your Website Like a Pro</h1>
+                <p class="text-xl mb-8 text-blue-100">Master website speed, SEO, backlinks, and more with our
+                    comprehensive guides and tools.</p>
+                <div class="flex space-x-4">
+                    <a href="#topics">
+                        <button
+                        class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
+                        Start Learning
+                    </button>
+                    </a>
+                    
+                    <a href="about.html">
+                        <button
+                        class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors flex">
+                        <img src="/images/arrow.svg" alt="arrow" class="w-3 mx-3">
+                        About Us
+                    </button>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                <div class="relative">
+                    <div class="w-80 h-80 bg-blue-400 rounded-full opacity-20 absolute -top-10 -left-10 floating"></div>
+                    <div class="w-80 h-80 bg-blue-300 rounded-full opacity-30 absolute -bottom-10 -right-10 floating"
+                        style="animation-delay: 1.5s;"></div>
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 w-80">
+                        <div class="flex space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                            <div class="h-2 bg-gray-300 rounded w-3/4 mb-2"></div>
+                            <div class="h-2 bg-gray-300 rounded w-1/2"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-blue-100 rounded-lg p-4 flex flex-col items-center">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full mb-2"></div>
+                                <div class="h-2 bg-blue-300 rounded w-full mb-1"></div>
+                                <div class="h-2 bg-blue-300 rounded w-3/4"></div>
+                            </div>
+                            <div class="bg-blue-100 rounded-lg p-4 flex flex-col items-center">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full mb-2"></div>
+                                <div class="h-2 bg-blue-300 rounded w-full mb-1"></div>
+                                <div class="h-2 bg-blue-300 rounded w-3/4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section id="topics" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Website
+                Building & Optimization Topics</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Explore our comprehensive guides on all aspects of website development and optimization.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Topic 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Website Speed Optimization</h3>
+                    <p class="text-gray-600 mb-4">Learn techniques to dramatically improve your website loading times
+                        and performance metrics.</p>
+                    <a href="guides.html?topic=speed" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guides
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">SEO & Search Ranking</h3>
+                    <p class="text-gray-600 mb-4">Master search engine optimization to improve your website visibility
+                        and organic traffic.</p>
+                    <a href="guides.html?topic=seo" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guide
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Backlink Strategies</h3>
+                    <p class="text-gray-600 mb-4">Build high-quality backlinks that boost your domain authority and
+                        search rankings.</p>
+                    <a href="guides.html?topic=backlink" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guide
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Security & Protection</h3>
+                    <p class="text-gray-600 mb-4">Secure your website from threats and implement best practices for data
+                        protection.</p>
+                    <a href="guides.html?topic=security" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guide
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Topic 5 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Code Optimization</h3>
+                    <p class="text-gray-600 mb-4">Write cleaner, faster, and more efficient code for better website
+                        performance.</p>
+                    <a href="guides.html?topic=code" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guide
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Topic 6 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-800">Comparison Posts</h3>
+                    <p class="text-gray-600 mb-4">Create effective comparison content that ranks well and converts
+                        visitors.</p>
+                    <a href="guides.html?topic=comparison" class="text-blue-600 font-semibold flex items-center">
+                        Explore Guide
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="py-16 glitter-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-glow" data-aos="fade-up">My Mission & Vision</h2>
+            <p class="text-blue-100 text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                I'm committed to creating the most helpful, accessible, and practical web development resources for all skill levels.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mission 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="100">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Education First</h3>
+                    <p class="text-blue-100 text-center">Creating clear, step-by-step tutorials that break down complex web development concepts into understandable lessons.</p>
+                </div>
+                
+                <!-- Mission 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="200">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Practical Implementation</h3>
+                    <p class="text-blue-100 text-center">Developing free guides and resources that solve real problems faced by website owners and developers.</p>
+                </div>
+                
+                <!-- Mission 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="300">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Community Building</h3>
+                    <p class="text-blue-100 text-center">Fostering a supportive community where learners can connect, share knowledge, and grow together.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-6">My Promise to You</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Always Up-to-Date</h4>
+                            <p class="text-blue-100 text-sm">I continuously update content to reflect the latest web standards and best practices.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">No Fluff, Just Value</h4>
+                            <p class="text-blue-100 text-sm">I focus on practical, actionable advice that you can implement immediately.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Accessible to All</h4>
+                            <p class="text-blue-100 text-sm">Content is designed to be understandable whether you're a complete beginner or experienced developer.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Always Free Core Content</h4>
+                            <p class="text-blue-100 text-sm">The essential guides and tools will always remain free to access for everyone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800" data-aos="fade-up">Ready to Optimize Your
+                Website?</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                Join thousands of website owners who have improved their site performance and rankings with our proven
+                strategies.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up"
+                data-aos-delay="400">
+                <a href="#topics">
+                    <button
+                        class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors pulse-blue">
+                        Get Started Now
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glitter-bg text-white py-12" id="footer"></footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="js/headerandfooter.js"></script>
+    <script></script>
+</body>
+
+</html>

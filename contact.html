@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TheProgrammerKid</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Glitter effect CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .glitter-bg {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glitter-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 60% 10%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 200px 200px;
+            animation: glitter 8s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes glitter {
+            0% {
+                background-position: 0 0, 100px 100px, 200px 200px, 300px 300px;
+            }
+            100% {
+                background-position: 200px 200px, 300px 300px, 400px 400px, 500px 500px;
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pulse-blue {
+            animation: pulse-blue 2s infinite;
+        }
+        
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            cursor: pointer;
+            padding: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item.active .faq-question {
+            color: #3b82f6;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+        }
+        
+        .copy-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .copy-btn.copied {
+            background-color: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+     <header id="header"></header>
+
+    <!-- Hero Section -->
+    <section class="glitter-bg text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-glow" data-aos="fade-up">Get In Touch With Us</h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                Have questions about website optimization? Need personalized advice? We're here to help you succeed.
+            </p>
+            <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact-methods" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
+                    Contact Methods
+                </a>
+                <a href="#faq" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    View FAQs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Us Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">When Should You Contact Us?</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Here are some common situations where our expertise can help you overcome challenges and achieve better results.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Website Speed Issues</h3>
+                    <p class="text-gray-600 text-center">Your website is loading slowly and you've tried basic optimizations without success.</p>
+                </div>
+                
+                <!-- Reason 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">SEO Challenges</h3>
+                    <p class="text-gray-600 text-center">You're not ranking well in search results despite following SEO best practices.</p>
+                </div>
+                
+                <!-- Reason 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Backlink Strategies</h3>
+                    <p class="text-gray-600 text-center">You need help building quality backlinks or recovering from a negative SEO attack.</p>
+                </div>
+                
+                <!-- Reason 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Tool Implementation</h3>
+                    <p class="text-gray-600 text-center">You're having trouble implementing or using our recommended optimization tools.</p>
+                </div>
+                
+                <!-- Reason 5 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="500">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Content Strategy</h3>
+                    <p class="text-gray-600 text-center">You need guidance on creating effective comparison posts or other content types.</p>
+                </div>
+                
+                <!-- Reason 6 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="contact-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Performance Analysis</h3>
+                    <p class="text-gray-600 text-center">You need help interpreting analytics data or creating an optimization roadmap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section id="contact-methods" class="py-16 glitter-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-glow" data-aos="fade-up">How to Reach Us</h2>
+            <p class="text-blue-100 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Choose the contact method that works best for you. We typically respond within 24 hours.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Discord Card -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20" data-aos="fade-right">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="contact-icon bg-purple-500 text-white">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Discord</h3>
+                        <p class="text-blue-100 mb-6">Join our Discord community for real-time conversations and quick answers to your questions.</p>
+                        <div class="bg-white bg-opacity-20 rounded-xl p-4 w-full mb-6">
+                            <p class="text-sm text-blue-200 mb-2">Username:</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-xl font-mono font-bold">professional_gamer20</p>
+                                <button id="copy-discord" class="copy-btn bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <a href="https://discord.com" target="_blank" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center">
+                            <i class="fab fa-discord mr-2"></i> Open Discord
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Email Card -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20" data-aos="fade-left">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="contact-icon bg-blue-500 text-white">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Email</h3>
+                        <p class="text-blue-100 mb-6">Send us a detailed message for complex issues or when you need to share files and screenshots.</p>
+                        <div class="bg-white bg-opacity-20 rounded-xl p-4 w-full mb-6">
+                            <p class="text-sm text-blue-200 mb-2">Email Address:</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-xl font-mono font-bold">mcdanishp@gmail.com</p>
+                                <button id="copy-email" class="copy-btn bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <a href="mailto:mcdanishp@gmail.com" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-6">What to Include in Your Message</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Clear Subject Line</h4>
+                            <p class="text-blue-100 text-sm">Briefly summarize your issue or question</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Website URL</h4>
+                            <p class="text-blue-100 text-sm">Include the address of your website</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Detailed Description</h4>
+                            <p class="text-blue-100 text-sm">Explain your issue or question thoroughly</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Screenshots/Error Messages</h4>
+                            <p class="text-blue-100 text-sm">Attach relevant images if applicable</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Find quick answers to common questions about website optimization and our services.
+            </p>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold">How long does it typically take to see improvements after optimizing website speed?</h3>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600">
+                        <p>Most website speed optimizations show immediate improvements in loading times. However, search engine recognition of these improvements can take anywhere from a few days to several weeks, depending on how frequently Google crawls your site. Core Web Vitals data in Google Search Console typically updates within 28 days.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What's the difference between technical SEO and on-page SEO?</h3>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600">
+                        <p>Technical SEO focuses on improving website infrastructure to help search engines crawl and index your site more effectively (site speed, mobile-friendliness, site architecture). On-page SEO involves optimizing individual page content and HTML elements (title tags, headers, content quality, internal linking). Both are essential for ranking well in search results.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold">How many backlinks do I need to start seeing ranking improvements?</h3>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600">
+                        <p>Quality matters more than quantity when it comes to backlinks. Even a few high-quality backlinks from authoritative websites in your niche can significantly impact your rankings. Focus on building relationships and creating link-worthy content rather than pursuing a specific number of backlinks.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold">What are the most important metrics to track for website performance?</h3>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600">
+                        <p>The key metrics to track include:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Largest Contentful Paint (LCP) - should be under 2.5 seconds</li>
+                                <li>First Input Delay (FID) - should be under 100 milliseconds</li>
+                                <li>Cumulative Layout Shift (CLS) - should be under 0.1</li>
+                                <li>Time to First Byte (TTFB) - should be under 800ms</li>
+                                <li>Overall page load time - ideally under 3 seconds</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question flex justify-between items-center">
+                        <h3 class="text-xl font-bold">Do you offer personalized consulting services?</h3>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="faq-answer text-gray-600">
+                        <p>Yes, we offer personalized consulting services for complex website optimization challenges. Contact us via Discord or email with details about your specific situation, and we can discuss customized solutions, pricing, and timelines based on your needs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <p class="text-gray-600 mb-4">Didn't find the answer you were looking for?</p>
+                <a href="#contact-methods" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors pulse-blue">
+                    Contact Us Directly
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer id="footer" class="glitter-bg text-white py-12"></footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    const icon = question.querySelector('i');
+                    if (item.classList.contains('active')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+            
+            // Copy functionality for contact methods
+            const copyDiscord = document.getElementById('copy-discord');
+            const copyEmail = document.getElementById('copy-email');
+            
+            copyDiscord.addEventListener('click', function() {
+                navigator.clipboard.writeText('professional_gamer20').then(() => {
+                    this.textContent = 'Copied!';
+                    this.classList.add('copied');
+                    setTimeout(() => {
+                        this.textContent = 'Copy';
+                        this.classList.remove('copied');
+                    }, 2000);
+                });
+            });
+            
+            copyEmail.addEventListener('click', function() {
+                navigator.clipboard.writeText('nickthegamer09@proton.me').then(() => {
+                    this.textContent = 'Copied!';
+                    this.classList.add('copied');
+                    setTimeout(() => {
+                        this.textContent = 'Copy';
+                        this.classList.remove('copied');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+    <script src="js/headerandfooter.js"></script>
+</body>
+</html>

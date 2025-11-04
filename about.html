@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | TheProgrammerKid</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Glitter effect CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .glitter-bg {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glitter-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+                radial-gradient(circle at 60% 10%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 200px 200px;
+            animation: glitter 8s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes glitter {
+            0% {
+                background-position: 0 0, 100px 100px, 200px 200px, 300px 300px;
+            }
+            100% {
+                background-position: 200px 200px, 300px 300px, 400px 400px, 500px 500px;
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .pulse-blue {
+            animation: pulse-blue 2s infinite;
+        }
+        
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        
+        .personal-img {
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .journey-step {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .journey-step::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .journey-step:nth-child(1)::before { content: "1"; }
+        .journey-step:nth-child(2)::before { content: "2"; }
+        .journey-step:nth-child(3)::before { content: "3"; }
+        .journey-step:nth-child(4)::before { content: "4"; }
+        
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header id="header"></header>
+
+    <!-- Hero Section -->
+    <section class="glitter-bg text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2 mb-4">
+                        <span class="text-blue-200 text-sm font-medium">My Story</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-glow">Empowering Creators Through Knowledge Sharing</h1>
+                    <p class="text-xl text-blue-100 mb-8">I'm Danish, a passionate web developer on a mission to make website building accessible to everyone - from aspiring coders to small business owners.</p>
+                    <div class="flex space-x-4">
+                        <a href="#journey" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
+                            My Journey
+                        </a>
+                        <a href="#mission" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            My Mission
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-blue-400 rounded-full opacity-20 absolute -top-10 -left-10 floating"></div>
+                        <div class="w-80 h-80 bg-blue-300 rounded-full opacity-30 absolute -bottom-10 -right-10 floating" style="animation-delay: 1.5s;"></div>
+                        <div class="relative">
+                            <img src="images/founder.jpg" alt="Danish - Founder of TheProgrammerKid" class="personal-img w-80 h-80 object-cover rounded-2xl">
+                            <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-2xl p-4 w-64">
+                                <h3 class="font-bold text-gray-800">Danish</h3>
+                                <p class="text-sm text-gray-600">Founder & Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Journey Section -->
+    <section id="journey" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">My Web Development Journey</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                From curious beginner to passionate educator - here's how I discovered my love for web development and teaching.
+            </p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="journey-step" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">The First Line of Code</h3>
+                            <p class="text-gray-600">It all started when I created my first HTML page as a teenager. I was amazed that with just a few lines of code, I could build something visible and interactive that anyone in the world could access.</p>
+                        </div>
+                        
+                        <div class="journey-step" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Helping Small Businesses</h3>
+                            <p class="text-gray-600">I began creating websites for local businesses and saw firsthand how a well-built website could transform their visibility and growth. This experience taught me the real-world impact of web development skills.</p>
+                        </div>
+                        
+                        <div class="journey-step" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">The Learning Challenges</h3>
+                            <p class="text-gray-600">I struggled with complex tutorials and outdated resources. This frustration inspired me to create clear, practical guides that focus on what actually works in modern web development.</p>
+                        </div>
+                        
+                        <div class="journey-step" data-aos="fade-up" data-aos-delay="400">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Birth of TheProgrammerKid</h3>
+                            <p class="text-gray-600">I combined my passion for coding with my desire to help others, creating TheProgrammerKid as a platform where anyone can learn to build and optimize websites, regardless of their starting point.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-delay="500">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-center mb-6 text-blue-800">Why I Teach Web Development</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 rounded-full p-3 mr-4 mt-1">
+                                    <i class="fas fa-lightbulb text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Democratizing Web Knowledge</h4>
+                                    <p class="text-gray-600">I believe that website creation skills should be accessible to everyone, not just professional developers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 rounded-full p-3 mr-4 mt-1">
+                                    <i class="fas fa-hands-helping text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Empowering Small Businesses</h4>
+                                    <p class="text-gray-600">A well-optimized website can level the playing field for small businesses competing with larger companies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 rounded-full p-3 mr-4 mt-1">
+                                    <i class="fas fa-code text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Building Future Developers</h4>
+                                    <p class="text-gray-600">I want to inspire the next generation of web developers by making coding approachable and enjoyable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-16 glitter-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-glow" data-aos="fade-up">My Mission & Vision</h2>
+            <p class="text-blue-100 text-center mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                I'm committed to creating the most helpful, accessible, and practical web development resources for all skill levels.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mission 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="100">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Education First</h3>
+                    <p class="text-blue-100 text-center">Creating clear, step-by-step tutorials that break down complex web development concepts into understandable lessons.</p>
+                </div>
+                
+                <!-- Mission 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="200">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Practical Tools</h3>
+                    <p class="text-blue-100 text-center">Developing free tools and resources that solve real problems faced by website owners and developers.</p>
+                </div>
+                
+                <!-- Mission 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20" data-aos="flip-left" data-aos-delay="300">
+                    <div class="value-icon bg-blue-500 text-white">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Community Building</h3>
+                    <p class="text-blue-100 text-center">Fostering a supportive community where learners can connect, share knowledge, and grow together.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-6">My Promise to You</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Always Up-to-Date</h4>
+                            <p class="text-blue-100 text-sm">I continuously update content to reflect the latest web standards and best practices.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">No Fluff, Just Value</h4>
+                            <p class="text-blue-100 text-sm">I focus on practical, actionable advice that you can implement immediately.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Accessible to All</h4>
+                            <p class="text-blue-100 text-sm">Content is designed to be understandable whether you're a complete beginner or experienced developer.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Always Free Core Content</h4>
+                            <p class="text-blue-100 text-sm">The essential guides and tools will always remain free to access for everyone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Making an Impact</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Even as an individual creator, I'm proud of the difference these resources are making in people's web development journeys.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">20+</div>
+                    <div class="text-gray-600 font-medium">Detailed Guides</div>
+                </div>
+                
+                <div class="stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">600+</div>
+                    <div class="text-gray-600 font-medium">Monthly Readers</div>
+                </div>
+                
+                <div class="stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">15+</div>
+                    <div class="text-gray-600 font-medium">Free Tools
+                        <br>
+                        (in development)</div>
+                </div>
+                
+                <div class="stat-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                    <div class="text-gray-600 font-medium">Free Content</div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">"The success of a website isn't measured by its code complexity, but by its ability to serve its purpose effectively. My goal is to equip you with the knowledge to create websites that truly work for you."</p>
+                <div class="flex items-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                        <span class="text-blue-600 font-bold">N</span>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-gray-800">Danish</p>
+                        <p class="text-sm text-gray-600">Founder, TheProgrammerKid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Community Section -->
+    <section class="py-16 glitter-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-glow" data-aos="fade-up">Join Our Learning Community</h2>
+            <p class="text-blue-100 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                Whether you're learning to code for the first time or looking to optimize your business website, you're welcome here.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="index.html#guides" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
+                    Start Learning
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="glitter-bg text-white py-12"></footer>
+
+    <!-- AOS JS -->
+     <script src="js/headerandfooter.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

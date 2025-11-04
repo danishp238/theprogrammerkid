@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Loading...</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .glitter-bg {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glitter-bg::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 60% 10%, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+      background-size: 200px 200px;
+      animation: glitter 8s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes glitter {
+      0% {
+        background-position: 0 0, 100px 100px, 200px 200px, 300px 300px;
+      }
+
+      100% {
+        background-position: 200px 200px, 300px 300px, 400px 400px, 500px 500px;
+      }
+    }
+
+    .difficulty-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .difficulty-beginner {
+      background-color: #dcfce7;
+      color: #16a34a;
+    }
+
+    .difficulty-intermediate {
+      background-color: #fef3c7;
+      color: #d97706;
+    }
+
+    .difficulty-advanced {
+      background-color: #fee2e2;
+      color: #dc2626;
+    }
+
+    .article-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1e3c72;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .article-content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2a5298;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+      color: #4b5563;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .article-content blockquote {
+      border-left: 4px solid #3b82f6;
+      background-color: #f0f9ff;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+    }
+
+    .article-content code {
+      background-color: #f1f5f9;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      color: #dc2626;
+    }
+
+    .article-content pre {
+      background-color: #1e293b;
+      color: #e2e8f0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .article-content img {
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin: 1.5rem 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    .pulse-blue {
+      animation: pulse-blue 2s infinite;
+    }
+
+    @keyframes pulse-blue {
+      0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+      }
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translate(0, 0px);
+      }
+
+      50% {
+        transform: translate(0, 15px);
+      }
+
+      100% {
+        transform: translate(0, -0px);
+      }
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #3b82f6;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    .back-to-top:hover {
+      background: #2563eb;
+      transform: translateY(-3px);
+    }
+
+    .table-of-contents {
+      max-height: 80vh;
+      /* keep it within the visible area */
+      overflow-y: auto;
+      /* enable vertical scroll */
+      scrollbar-width: thin;
+      /* for Firefox */
+      scrollbar-color: rgba(100, 116, 139, 0.4) transparent;
+      /* subtle scrollbar */
+    }
+
+    /* Optional: nicer scrollbar for WebKit browsers */
+    .table-of-contents::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .table-of-contents::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .table-of-contents::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 116, 139, 0.4);
+      border-radius: 3px;
+    }
+
+    .table-of-contents::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(100, 116, 139, 0.6);
+    }
+
+
+    .toc-link {
+      display: block;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .toc-link:hover,
+    .toc-link.active {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    @media (min-width: 1024px) {
+      .table-of-contents {
+        position: sticky;
+        top: 6rem;
+        /* adjust depending on your header height */
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Header will be populated by headerandfooter.js -->
+  <header id="header"></header>
+
+  <!-- Article Hero Section -->
+  <section class="glitter-bg text-white py-12 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="inline-flex items-center bg-white bg-opacity-20 rounded-full px-4 py-2 mb-4" data-aos="fade-up">
+          <span class="text-blue-200 text-sm font-medium">Web Development Guide</span>
+        </div>
+        <h1 id="article-title" class="text-4xl md:text-5xl font-bold mb-6 text-glow" data-aos="fade-up"
+          data-aos-delay="200"></h1>
+        <p id="article-description" class="text-xl text-blue-100 mb-8" data-aos="fade-up" data-aos-delay="400"></p>
+        <div class="flex flex-wrap items-center gap-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="flex items-center">
+            <span id="article-difficulty" class="difficulty-badge"></span>
+          </div>
+          <div class="flex items-center text-blue-200">
+            <i class="fas fa-clock mr-2"></i>
+            <span id="article-readtime"></span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+        <!-- Table of Contents -->
+        <div class="lg:w-1/4" data-aos="fade-right">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg table-of-contents">
+            <h3 class="text-xl font-bold text-blue-800 mb-4">In This Guide</h3>
+            <nav id="table-of-contents">
+              <!-- Table of contents will be populated by JavaScript -->
+            </nav>
+          </div>
+
+          <!-- Share Section -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg mt-6" data-aos="fade-up"
+            data-aos-delay="300">
+            <h3 class="text-xl font-bold text-blue-800 mb-4">Share This Guide</h3>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <i class="fab fa-twitter" id="share"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors"
+                id="share-facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors"
+                id="share-linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-gray-900 transition-colors"
+                id="share-github">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article Content -->
+        <div class="lg:w-3/4" data-aos="fade-left">
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <div id="article-content" class="article-content">
+              <!-- Article content will be populated by JavaScript -->
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                  <h3 class="text-lg font-bold text-gray-800 mb-2">Found this helpful?</h3>
+                  <p class="text-gray-600">Share your thoughts or ask questions on my email</p>
+                </div>
+                <div class="flex space-x-4">
+                  <a href="mailto:mcdanishp@gmail.com">
+                    <button
+                      class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors flex items-center">
+                      <i class="fa-brands fa-gmail mr-2"></i> Discuss
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Articles -->
+          <div id="related-guides" class="mt-12" data-aos="fade-up"></div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Footer will be populated by headerandfooter.js -->
+  <footer id="footer" class="glitter-bg text-white py-12"></footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Table of contents functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      // This would typically be populated by your article.js
+      // For demonstration, we'll add some example content
+      const articleContent = document.getElementById('article-content');
+      if (articleContent && articleContent.innerHTML.trim() === '') {
+        articleContent.innerHTML = `
+          <p>This is where the article content will be dynamically loaded.</p>
+          <p>The JavaScript will populate this section with the actual article content.</p>
+          <h2>Example Section</h2>
+          <p>This is an example of how headings will be styled in the article.</p>
+          <h3>Subsection Example</h3>
+          <p>Subsections will have a slightly different styling.</p>
+          <blockquote>
+            This is an example blockquote that highlights important information.
+          </blockquote>
+          <p>You can also include <code>code snippets</code> inline with your text.</p>
+          <pre><code>// And code blocks for longer examples
+function example() {
+  console.log("This is a code block");
+}</code></pre>
+        `;
+      }
+
+      // Generate table of contents from headings
+      const headings = articleContent.querySelectorAll('h2, h3');
+      const tocContainer = document.getElementById('table-of-contents');
+
+      if (headings.length > 0 && tocContainer) {
+        headings.forEach((heading, index) => {
+          // Add ID if not present
+          if (!heading.id) {
+            heading.id = 'section-' + (index + 1);
+          }
+
+          // Create TOC link
+          const link = document.createElement('a');
+          link.href = '#' + heading.id;
+          link.className = 'toc-link';
+          link.textContent = heading.textContent;
+
+          // Add different styling for h2 and h3
+          if (heading.tagName === 'H3') {
+            link.style.paddingLeft = '2rem';
+            link.style.fontSize = '0.9rem';
+          }
+
+          tocContainer.appendChild(link);
+        });
+
+        // Smooth scrolling for TOC links
+        tocContainer.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            window.scrollTo({
+              top: targetSection.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          });
+        });
+      }
+    });
+
+    // sharing article functionality
+    document.addEventListener("DOMContentLoaded", () => {
+      const pageUrl = encodeURIComponent(window.location.href);
+      const pageTitle = encodeURIComponent(document.title);
+
+      // Facebook
+      document.getElementById("share-facebook")?.setAttribute(
+        "href",
+        `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`
+      );
+
+      // LinkedIn
+      document.getElementById("share-linkedin")?.setAttribute(
+        "href",
+        `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`
+      );
+
+      // GitHub – not a real share platform, you can link to your GitHub profile or repo
+      document.getElementById("share-github")?.setAttribute(
+        "href",
+        `https://github.com/YOUR_GITHUB_USERNAME`
+      );
+
+      // Discord – Discord doesn’t support link sharing directly, so best option:
+      document.getElementById("share-discord")?.setAttribute(
+        "href",
+        `https://discord.gg/YOUR_INVITE_LINK`
+      );
+    });
+
+  </script>
+
+  <!-- Your scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/article.js"></script>
+  <script src="js/headerandfooter.js"></script>
+
+</body>
+
+</html>

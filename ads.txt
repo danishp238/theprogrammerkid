@@ -1,1 +1,3 @@
-https://srv.adstxtmanager.com/19390/theprogrammarkid004.online
+# Ezoic ads.txt placeholder
+# This file will be updated once Ezoic generates entries.
+google.com, pub-9616389000213823, DIRECT, f08c47fec0942fa0

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- pop ads script (approved 😄) -->
+    <script type="text/javascript" data-cfasync="false">
+        /*<![CDATA[/* */
+        (function () { var v = window, k = "fcc62dbfdc5f33af8f72945553c9d0d2", p = [["siteId", 657 * 164 * 917 - 93549934], ["minBid", 0], ["popundersPerIP", "0"], ["delayBetween", 0], ["default", false], ["defaultPerDay", 0], ["topmostLayer", "auto"]], x = ["d3d3LnZpc2FyaW9tZWRpYS5jb20vZGZjU2IvanVuZGVyc2NvcmUtbWluLmpz", "ZDEzazdwcmF4MXlpMDQuY2xvdWRmcm9udC5uZXQvZ2Z2L0hWbEFIL2N0d2lnLm1pbi5jc3M="], l = -1, h, f, m = function () { clearTimeout(f); l++; if (x[l] && !(1789366199000 < (new Date).getTime() && 1 < l)) { h = v.document.createElement("script"); h.type = "text/javascript"; h.async = !0; var j = v.document.getElementsByTagName("script")[0]; h.src = "https://" + atob(x[l]); h.crossOrigin = "anonymous"; h.onerror = m; h.onload = function () { clearTimeout(f); v[k.slice(0, 16) + k.slice(0, 16)] || m() }; f = setTimeout(m, 5E3); j.parentNode.insertBefore(h, j) } }; if (!v[k]) { try { Object.freeze(v[k] = p) } catch (e) { } m() } })();
+        /*]]>/* */
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Website Tools | TheProgrammerKid</title>
@@ -13,18 +20,18 @@
     <!-- Glitter effect CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
-        
+
         .glitter-bg {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
         .glitter-bg::before {
             content: "";
             position: absolute;
@@ -32,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
                 radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
                 radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
@@ -41,55 +48,66 @@
             animation: glitter 8s linear infinite;
             pointer-events: none;
         }
-        
+
         @keyframes glitter {
             0% {
                 background-position: 0 0, 100px 100px, 200px 200px, 300px 300px;
             }
+
             100% {
                 background-position: 200px 200px, 300px 300px, 400px 400px, 500px 500px;
             }
         }
-        
+
         .card-hover {
             transition: all 0.3s ease;
         }
-        
+
         .card-hover:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
+
         .pulse-blue {
             animation: pulse-blue 2s infinite;
         }
-        
+
         @keyframes pulse-blue {
             0% {
                 box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
             }
+
             70% {
                 box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
             }
         }
-        
+
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
+
         @keyframes floating {
-            0% { transform: translate(0, 0px); }
-            50% { transform: translate(0, 15px); }
-            100% { transform: translate(0, -0px); }
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            50% {
+                transform: translate(0, 15px);
+            }
+
+            100% {
+                transform: translate(0, -0px);
+            }
         }
-        
+
         .text-glow {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
         }
-        
+
         .coming-soon-badge {
             position: absolute;
             top: -10px;
@@ -103,7 +121,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             z-index: 10;
         }
-        
+
         .tool-icon {
             width: 80px;
             height: 80px;
@@ -117,16 +135,16 @@
             color: white;
             box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
-        
+
         .progress-ring {
             transform: rotate(-90deg);
         }
-        
+
         .progress-ring-circle {
             transition: stroke-dashoffset 0.5s ease;
             transform-origin: 50% 50%;
         }
-        
+
         .countdown-number {
             font-size: 2.5rem;
             font-weight: 700;
@@ -134,18 +152,19 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .feature-card {
             transition: all 0.4s ease;
             border-top: 4px solid transparent;
         }
-        
+
         .feature-card:hover {
             border-top-color: #3b82f6;
             transform: translateY(-5px);
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Navigation -->
     <header id="header"></header>
@@ -159,26 +178,35 @@
                         <span class="text-blue-200 text-sm font-medium">Coming Soon</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6 text-glow">Powerful Free Tools for Your Website</h1>
-                    <p class="text-xl text-blue-100 mb-8">We're crafting a suite of professional tools to help website owners, developers, and creators optimize their sites with cutting-edge techniques.</p>
+                    <p class="text-xl text-blue-100 mb-8">We're crafting a suite of professional tools to help website
+                        owners, developers, and creators optimize their sites with cutting-edge techniques.</p>
                     <div class="flex space-x-4">
-                        <a href="#tools-preview" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
+                        <a href="#tools-preview"
+                            class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors pulse-blue">
                             Preview Tools
                         </a>
-                        <a href="#form-container" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        <a href="#form-container"
+                            class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                             Get Notified
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
                     <div class="relative">
-                        <div class="w-80 h-80 bg-blue-400 rounded-full opacity-20 absolute -top-10 -left-10 floating"></div>
-                        <div class="w-80 h-80 bg-blue-300 rounded-full opacity-30 absolute -bottom-10 -right-10 floating" style="animation-delay: 1.5s;"></div>
+                        <div class="w-80 h-80 bg-blue-400 rounded-full opacity-20 absolute -top-10 -left-10 floating">
+                        </div>
+                        <div class="w-80 h-80 bg-blue-300 rounded-full opacity-30 absolute -bottom-10 -right-10 floating"
+                            style="animation-delay: 1.5s;"></div>
                         <div class="relative bg-white rounded-2xl shadow-2xl p-8 w-80">
                             <div class="flex justify-center mb-6">
                                 <div class="relative">
                                     <svg class="w-32 h-32 progress-ring" viewBox="0 0 100 100">
-                                        <circle class="text-gray-200 stroke-current" stroke-width="8" cx="50" cy="50" r="40" fill="transparent"></circle>
-                                        <circle class="progress-ring-circle text-blue-500 stroke-current" stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent" stroke-dasharray="251.2" stroke-dashoffset="75.36"></circle>
+                                        <circle class="text-gray-200 stroke-current" stroke-width="8" cx="50" cy="50"
+                                            r="40" fill="transparent"></circle>
+                                        <circle class="progress-ring-circle text-blue-500 stroke-current"
+                                            stroke-width="8" stroke-linecap="round" cx="50" cy="50" r="40"
+                                            fill="transparent" stroke-dasharray="251.2" stroke-dashoffset="75.36">
+                                        </circle>
                                     </svg>
                                     <div class="absolute inset-0 flex items-center justify-center">
                                         <span class="text-2xl font-bold text-blue-600">70%</span>
@@ -186,7 +214,8 @@
                                 </div>
                             </div>
                             <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Development Progress</h3>
-                            <p class="text-gray-600 text-center">Our tools are currently in active development with a focus on quality and user experience.</p>
+                            <p class="text-gray-600 text-center">Our tools are currently in active development with a
+                                focus on quality and user experience.</p>
                         </div>
                     </div>
                 </div>
@@ -197,85 +226,99 @@
     <!-- Tools Preview Section -->
     <section id="tools-preview" class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Revolutionary Tools in Development</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Revolutionary
+                Tools in Development</h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                We're building a comprehensive toolkit designed to solve real problems faced by website owners and developers.
+                We're building a comprehensive toolkit designed to solve real problems faced by website owners and
+                developers.
             </p>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Tool 1 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Website Speed Analyzer</h3>
-                    <p class="text-gray-600 text-center mb-4">Comprehensive analysis of your website performance with actionable recommendations tailored to your specific setup.</p>
+                    <p class="text-gray-600 text-center mb-4">Comprehensive analysis of your website performance with
+                        actionable recommendations tailored to your specific setup.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q1 2026</span>
                     </div>
                 </div>
-                
+
                 <!-- Tool 2 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-search"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">SEO Health Checker</h3>
-                    <p class="text-gray-600 text-center mb-4">Deep-dive analysis of your website's SEO performance with personalized optimization strategies.</p>
+                    <p class="text-gray-600 text-center mb-4">Deep-dive analysis of your website's SEO performance with
+                        personalized optimization strategies.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q1 2026</span>
                     </div>
                 </div>
-                
+
                 <!-- Tool 3 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-file-image"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Smart Image Optimizer</h3>
-                    <p class="text-gray-600 text-center mb-4">Automatically optimize images for web without quality loss, with support for modern formats like WebP and AVIF.</p>
+                    <p class="text-gray-600 text-center mb-4">Automatically optimize images for web without quality
+                        loss, with support for modern formats like WebP and AVIF.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q2 2026</span>
                     </div>
                 </div>
-                
+
                 <!-- Tool 4 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="400">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Security Vulnerability Scanner</h3>
-                    <p class="text-gray-600 text-center mb-4">Identify potential security risks in your website with detailed explanations and remediation steps.</p>
+                    <p class="text-gray-600 text-center mb-4">Identify potential security risks in your website with
+                        detailed explanations and remediation steps.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q2 2026</span>
                     </div>
                 </div>
-                
+
                 <!-- Tool 5 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="500">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="500">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Mobile Responsiveness Tester</h3>
-                    <p class="text-gray-600 text-center mb-4">Test your website across multiple device sizes and receive specific recommendations for mobile optimization.</p>
+                    <p class="text-gray-600 text-center mb-4">Test your website across multiple device sizes and receive
+                        specific recommendations for mobile optimization.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q1 2026</span>
                     </div>
                 </div>
-                
+
                 <!-- Tool 6 -->
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg card-hover relative"
+                    data-aos="fade-up" data-aos-delay="600">
                     <div class="coming-soon-badge">Coming Soon</div>
                     <div class="tool-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3 class="text-xl font-bold text-center mb-3 text-blue-800">Code Minifier & Optimizer</h3>
-                    <p class="text-gray-600 text-center mb-4">Minify and optimize your CSS, JavaScript, and HTML with advanced compression techniques.</p>
+                    <p class="text-gray-600 text-center mb-4">Minify and optimize your CSS, JavaScript, and HTML with
+                        advanced compression techniques.</p>
                     <div class="mt-4 text-center">
                         <span class="text-sm text-blue-600 font-semibold">Estimated Launch: Q2 2026</span>
                     </div>
@@ -287,34 +330,41 @@
     <!-- Why Our Tools Section -->
     <section class="py-16 glitter-bg text-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-glow" data-aos="fade-up">Why Our Tools Will Stand Out</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-glow" data-aos="fade-up">Why Our Tools Will
+                Stand Out</h2>
             <p class="text-blue-100 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 We're not just building tools—we're crafting solutions based on real-world experience and user feedback.
             </p>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center" data-aos="flip-left" data-aos-delay="100">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center"
+                    data-aos="flip-left" data-aos-delay="100">
                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
                         <i class="fas fa-bolt text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Built on Real Experience</h3>
-                    <p class="text-blue-100">Each tool solves problems we've personally encountered and overcome in our web development journey.</p>
+                    <p class="text-blue-100">Each tool solves problems we've personally encountered and overcome in our
+                        web development journey.</p>
                 </div>
-                
-                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center" data-aos="flip-left" data-aos-delay="200">
+
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center"
+                    data-aos="flip-left" data-aos-delay="200">
                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
                         <i class="fas fa-user-friends text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">User-Centric Design</h3>
-                    <p class="text-blue-100">Tools designed with actual users in mind—not just developers. Intuitive interfaces with clear results.</p>
+                    <p class="text-blue-100">Tools designed with actual users in mind—not just developers. Intuitive
+                        interfaces with clear results.</p>
                 </div>
-                
-                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center" data-aos="flip-left" data-aos-delay="300">
+
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 border border-white border-opacity-20 text-center"
+                    data-aos="flip-left" data-aos-delay="300">
                     <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4 mx-auto">
                         <i class="fas fa-rocket text-blue-600 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Actionable Insights</h3>
-                    <p class="text-blue-100">Beyond just data—we provide clear, actionable recommendations you can implement immediately.</p>
+                    <p class="text-blue-100">Beyond just data—we provide clear, actionable recommendations you can
+                        implement immediately.</p>
                 </div>
             </div>
         </div>
@@ -323,17 +373,20 @@
     <!-- Development Progress -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Our Development Journey</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800" data-aos="fade-up">Our Development
+                Journey</h2>
             <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 We believe in transparency. Here's where we are in the process of creating these powerful tools.
             </p>
-            
+
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-center mb-12" data-aos="fade-up">
                     <div class="md:w-1/2 mb-8 md:mb-0">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Quality Over Speed</h3>
-                        <p class="text-gray-600 mb-4">We're taking our time to ensure each tool meets our high standards for accuracy, usability, and performance.</p>
-                        <p class="text-gray-600">Rather than rushing to release half-baked solutions, we're methodically building tools that will genuinely help website owners and developers.</p>
+                        <p class="text-gray-600 mb-4">We're taking our time to ensure each tool meets our high standards
+                            for accuracy, usability, and performance.</p>
+                        <p class="text-gray-600">Rather than rushing to release half-baked solutions, we're methodically
+                            building tools that will genuinely help website owners and developers.</p>
                     </div>
                     <div class="md:w-2/5">
                         <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg">
@@ -359,12 +412,16 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold text-center text-blue-800 mb-6">Want to Influence Our Development?</h3>
-                    <p class="text-gray-700 text-center mb-6">We're collecting feedback on which features matter most to our community. Your input could shape what we build next.</p>
+
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <h3 class="text-2xl font-bold text-center text-blue-800 mb-6">Want to Influence Our Development?
+                    </h3>
+                    <p class="text-gray-700 text-center mb-6">We're collecting feedback on which features matter most to
+                        our community. Your input could shape what we build next.</p>
                     <div class="text-center">
-                        <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+                        <a href="contact.html"
+                            class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
                             <i class="fas fa-comment-dots mr-2"></i> Share Your Ideas
                         </a>
                     </div>
@@ -378,31 +435,28 @@
         <div class="container mx-auto px-6 text-center" id="form-container">
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-glow" data-aos="fade-up">Be the First to Know</h2>
             <p class="text-blue-100 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
-                Join our notification list and we'll let you know as soon as our tools are ready. No spam, just meaningful updates.
+                Join our notification list and we'll let you know as soon as our tools are ready. No spam, just
+                meaningful updates.
             </p>
-            
-            <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="400">
-  <form class="flex flex-col sm:flex-row gap-4" id="tools-form">
-    <input 
-      type="email" 
-      id="tools-email" 
-      placeholder="Your email address"
-      class="bg-white bg-opacity-20 rounded-full px-6 py-3 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white flex-grow"
-    >
-    <button 
-      id="tools-btn"
-      class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors whitespace-nowrap">
-      Notify Me
-    </button>
-  </form>
-  <p id="tools-message" class="text-green-300 text-sm mt-2 hidden">
-    ✅ You’ll be notified when the tool is ready!
-  </p>
-  <p class="text-blue-200 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
-</div>
 
-            
-            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="600">
+            <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="400">
+                <form class="flex flex-col sm:flex-row gap-4" id="tools-form">
+                    <input type="email" id="tools-email" placeholder="Your email address"
+                        class="bg-white bg-opacity-20 rounded-full px-6 py-3 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white flex-grow">
+                    <button id="tools-btn"
+                        class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors whitespace-nowrap">
+                        Notify Me
+                    </button>
+                </form>
+                <p id="tools-message" class="text-green-300 text-sm mt-2 hidden">
+                    ✅ You’ll be notified when the tool is ready!
+                </p>
+                <p class="text-blue-200 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+
+
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto" data-aos="fade-up"
+                data-aos-delay="600">
                 <div class="text-center">
                     <div class="countdown-number">100+</div>
                     <p class="text-blue-200 text-sm">Already Interested</p>
@@ -426,15 +480,19 @@
     <!-- CTA Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800" data-aos="fade-up">Explore Our Resources While You Wait</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800" data-aos="fade-up">Explore Our Resources While
+                You Wait</h2>
             <p class="text-gray-600 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
                 Our comprehensive guides and tutorials are available right now to help you optimize your website.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="400">
-                <a href="index.html#guides" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors pulse-blue">
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up"
+                data-aos-delay="400">
+                <a href="index.html#guides"
+                    class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors pulse-blue">
                     Browse Guides
                 </a>
-                <a href="about.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                <a href="about.html"
+                    class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
                     Learn About Us
                 </a>
             </div>
@@ -455,4 +513,5 @@
         });
     </script>
 </body>
+
 </html>

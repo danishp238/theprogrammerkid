@@ -100,7 +100,7 @@ function setupDifficultyFilters() {
 
       const difficulty = this.getAttribute('data-difficulty');
 
-      articles.forEach(article => {
+      articles.forEach(article => { 
         if (difficulty === 'all' || article.getAttribute('data-difficulty') === difficulty) {
           article.style.display = 'block';
           article.style.opacity = '0';
